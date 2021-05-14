@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoadingController">
+   <children>
+      <ProgressBar fx:id="progressBar" layoutX="217.0" layoutY="377.0" prefHeight="11.0" prefWidth="600.0" progress="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="200.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="136.0">
+         <image>
+            <Image url="@../img/management.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutY="43.0" prefHeight="110.0" prefWidth="600.0" style="-fx-background-color: #0099FF;" text="QUẢN LÍ HỌC PHÍ SINH VIÊN" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="loadText" alignment="CENTER" layoutX="286.0" layoutY="368.0" prefHeight="18.0" prefWidth="295.0" text="Loading..." textFill="#0090ff" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="110.0" fitWidth="118.0" layoutX="57.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="60.0">
+         <image>
+            <Image url="@../img/coins.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="110.0" fitWidth="118.0" layoutX="434.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="60.0">
+         <image>
+            <Image url="@../img/book.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
+   <children>
+      <Label alignment="CENTER" layoutX="116.0" layoutY="14.0" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #0099FF;" text="ĐĂNG KÝ TÀI KHOẢN" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/teacher.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="58.0" layoutY="75.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0">
+         <children>
+            <VBox>
+               <children>
+                  <Label prefHeight="18.0" prefWidth="167.0" text="Tên:" textFill="#0099ff">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="firstNameText" prefHeight="26.0" prefWidth="501.0" promptText="Đệm, tên" />
+                  <Label fx:id="FirstNameError" textFill="RED" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label prefHeight="18.0" prefWidth="167.0" text="Họ:" textFill="#0099ff">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lastNameText" prefHeight="26.0" prefWidth="501.0" promptText="Họ" />
+                  <Label fx:id="LastNameError" textFill="RED" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="56.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="167.0" text="UserName:" textFill="#0099ff">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="userNameText" prefHeight="26.0" prefWidth="501.0" promptText="Usename" />
+                  <Label fx:id="userNameError" textFill="RED" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="167.0" text="Password:" textFill="#0099ff">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passWordText" promptText="password" />
+                  <Label fx:id="passwordError" textFill="RED" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="56.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="167.0" text="Nhập lại pasword:" textFill="#0099ff">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="paswordAgainText" promptText="xác nhận lại password" />
+                  <Label fx:id="passwordAgainError" textFill="RED" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <Button layoutX="70.0" layoutY="410.0" mnemonicParsing="false" onAction="#OKButton" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #0099FF;" text="OK" textFill="WHITE" AnchorPane.leftAnchor="70.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="300.0" layoutY="410.0" mnemonicParsing="false" onAction="#CancelButton" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #0099FF;" text="Thoát" textFill="WHITE" AnchorPane.rightAnchor="70.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

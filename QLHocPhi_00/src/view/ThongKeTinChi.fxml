@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ThongKeTinChiController">
+   <children>
+      <Label alignment="CENTER" layoutX="186.0" layoutY="6.0" style="-fx-background-color: #0099FF;" text="THỐNG KÊ SINH VIÊN THEO THỜI ĐIỂM NHẬP" textFill="#fffefe" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="namHocText" alignment="CENTER" layoutX="221.0" layoutY="68.0" prefHeight="26.0" prefWidth="149.0" promptText="Nhập năm học đăng kí" AnchorPane.bottomAnchor="406.0" AnchorPane.leftAnchor="221.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="68.0" />
+      <TableView fx:id="studentTable" layoutX="30.0" layoutY="117.0" prefHeight="274.0" prefWidth="340.0" AnchorPane.bottomAnchor="109.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="117.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="107.20001220703125" text="ID" />
+          <TableColumn fx:id="nameColumn" prefWidth="232.0" text="Họ tên" />
+        </columns>
+      </TableView>
+      <Button fx:id="exitButton" defaultButton="true" layoutX="161.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleCancelThongKe" prefHeight="26.0" prefWidth="79.0" text="Thoát" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="161.0" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="450.0" />
+      <Label layoutX="30.0" layoutY="68.0" prefHeight="26.0" prefWidth="193.0" text="Nhập năm học của sinh viên:" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="224.0" layoutY="407.0" prefHeight="26.0" prefWidth="114.0" text="Tổng (sinh viên):">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="sumStudentText" alignment="CENTER" layoutX="338.0" layoutY="407.0" prefHeight="26.0" prefWidth="30.0" style="-fx-background-color: #FFFFFF;" text="0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
