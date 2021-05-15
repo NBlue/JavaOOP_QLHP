@@ -24,4 +24,24 @@ public class TextFieldValidation {
         lb.setText(msg);
         return b;
     }
+
+
+    /** Kiểm tra textField nhập vào là 1 số */
+    public static boolean textFieldTypeNumber(TextField tf){
+        boolean b = false;
+        if(tf.getText().matches("([0-9]+(\\.[0-9]+)?)+"))
+            b = true;
+        return b;
+    }
+
+    public static boolean textFieldTypeNumber(TextField tf, Label lb, String errorMessage){
+        boolean b = true;
+        String msg = null;
+        if(!textFieldTypeNumber(tf)){
+            b = true;
+            msg = errorMessage;
+        }
+        lb.setText(msg);
+        return b;
+    }
 }

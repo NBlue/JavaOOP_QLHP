@@ -110,9 +110,9 @@ public class HocCtrMauController extends StudentCtrMau implements Initializable 
         boolean isEmailEmpty = validation.TextFieldValidation.
                 textFieldNotEmpty(ctrEmailText, ctrEmailError, "Email được yêu cầu nhập!");
         boolean isStudyProgram = validation.TextFieldValidation.
-                textFieldNotEmpty(ctrStudyProgramText, ctrStudyProgramError, "Chương trình học được yêu cầu nhâp!");
+                textFieldNotEmpty(ctrStudyProgramText, ctrStudyProgramError, "Chương trình học được yêu cầu nhập!");
         boolean isHocPhan = validation.TextFieldValidation.
-                textFieldNotEmpty(ctrHocPhanText, ctrHocPhanError, "Số học phần được yêu cầu nhập!");
+                textFieldTypeNumber(ctrHocPhanText, ctrHocPhanError, "Số học phần được yêu cầu nhập là 1 số!");
         boolean isNamHoc = validation.TextFieldValidation.
                 textFieldNotEmpty(ctrNamHocText, ctrNamHocError, "Năm học được yêu cầu nhập!");
 
@@ -169,12 +169,12 @@ public class HocCtrMauController extends StudentCtrMau implements Initializable 
         boolean isEmailEmpty = validation.TextFieldValidation.
                 textFieldNotEmpty(ctrEmailText, ctrEmailError, "Email được yêu cầu nhập!");
         boolean isStudyProgram = validation.TextFieldValidation.
-                textFieldNotEmpty(ctrStudyProgramText, ctrStudyProgramError, "Chương trình học được yêu cầu nhâp!");
-        boolean isTinChi = validation.TextFieldValidation.
-                textFieldNotEmpty(ctrHocPhanText, ctrHocPhanError, "Số học phần được yêu cầu nhập!");
+                textFieldNotEmpty(ctrStudyProgramText, ctrStudyProgramError, "Chương trình học được yêu cầu nhập!");
+        boolean isHocPhan = validation.TextFieldValidation.
+                textFieldTypeNumber(ctrHocPhanText, ctrHocPhanError, "Số học phần được yêu cầu nhập là 1 số!");
         boolean isNamHoc = validation.TextFieldValidation.
                 textFieldNotEmpty(ctrNamHocText, ctrNamHocError, "Năm học được yêu cầu nhập!");
-        if (isIdEmpty && isNameEmpty && isBirthdayEmpty && isEmailEmpty && isStudyProgram && isTinChi && isNamHoc) {
+        if (isIdEmpty && isNameEmpty && isBirthdayEmpty && isEmailEmpty && isStudyProgram && isHocPhan && isNamHoc) {
             String sql = "Update tblHocCtrMau set name = ?, birthday = ?, " +
                     "email = ?, studyProgram = ?, hocPhan = ?, fees = ?, namHoc = ? where ID = ?";
             float tinhHocPhi = (float) (Float.valueOf(ctrHocPhanText.getText()) * 2.5 * 250 + 1000);

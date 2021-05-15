@@ -111,9 +111,9 @@ public class HocTinChiController extends StudentTinChi implements Initializable 
         boolean isEmailEmpty = validation.TextFieldValidation.
                 textFieldNotEmpty(tcEmailText, tcEmailError, "Email được yêu cầu nhập!");
         boolean isStudyProgram = validation.TextFieldValidation.
-                textFieldNotEmpty(tcStudyProgramText, tcStudyProgramError, "Chương trình học được yêu cầu nhâp!");
+                textFieldNotEmpty(tcStudyProgramText, tcStudyProgramError, "Chương trình học được yêu cầu nhập!");
         boolean isTinChi = validation.TextFieldValidation.
-                textFieldNotEmpty(tcTinChiText, tcTinChiError, "Số tín chỉ được yêu cầu nhập!");
+                textFieldTypeNumber(tcTinChiText, tcTinChiError, "Số tín chỉ được yêu cầu nhập là 1 số!");
         boolean isNamHoc = validation.TextFieldValidation.
                 textFieldNotEmpty(tcNamHocText, tcNamHocError, "Năm học được yêu cầu nhập!");
 
@@ -170,9 +170,9 @@ public class HocTinChiController extends StudentTinChi implements Initializable 
         boolean isEmailEmpty = validation.TextFieldValidation.
                 textFieldNotEmpty(tcEmailText, tcEmailError, "Email được yêu cầu nhập!");
         boolean isStudyProgram = validation.TextFieldValidation.
-                textFieldNotEmpty(tcStudyProgramText, tcStudyProgramError, "Chương trình học được yêu cầu nhâp!");
+                textFieldNotEmpty(tcStudyProgramText, tcStudyProgramError, "Chương trình học được yêu cầu nhập!");
         boolean isTinChi = validation.TextFieldValidation.
-                textFieldNotEmpty(tcTinChiText, tcTinChiError, "Số tín chỉ được yêu cầu nhập!");
+                textFieldTypeNumber(tcTinChiText, tcTinChiError, "Số tín chỉ được yêu cầu nhập là 1 số!");
         boolean isNamHoc = validation.TextFieldValidation.
                 textFieldNotEmpty(tcNamHocText, tcNamHocError, "Năm học được yêu cầu nhập!");
         if (isIdEmpty && isNameEmpty && isBirthdayEmpty && isEmailEmpty && isStudyProgram && isTinChi && isNamHoc) {
