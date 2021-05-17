@@ -1,4 +1,4 @@
-/**@admin: Nguyễn Mạnh Duy - 20194262
+/**@admin: Nguyễn Phương Nam - 20194336
  * */
 package dialog_notification;
 

@@ -1,4 +1,5 @@
-
+/**@admin: Nguyễn Phương Nam - 20194336
+ * */
 package validation;
 
 import javafx.scene.control.Label;

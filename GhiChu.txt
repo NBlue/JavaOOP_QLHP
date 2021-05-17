@@ -1,3 +1,0 @@
-Ghi chú:
-+ Nên sử dụng SQL Server 2019 để backup Database để tránh bị lỗi giữa các phiên bản SQL cũ hơn.
-+ Có thế back up bằng file .bak hoặc có thể import Database bằng file .bacpac
