@@ -8,76 +8,81 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignInController">
-   <left>
-      <AnchorPane prefHeight="400.0" prefWidth="248.0" style="-fx-background-color: #0099FF;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="46.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/book.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="70.0" fitWidth="106.0" layoutX="93.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/money.png" />
-               </image>
-            </ImageView>
-            <Label alignment="CENTER" layoutY="116.0" prefHeight="44.0" prefWidth="255.0" text="HỆ THỐNG QUẢN LÍ" textFill="#f70000" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutY="148.0" prefHeight="44.0" prefWidth="255.0" text="HỌC PHÍ SINH VIÊN" textFill="#f70000">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-   </left>
-   <center>
-      <AnchorPane prefHeight="400.0" prefWidth="359.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
-         <children>
-            <TextField fx:id="userNameText" layoutX="100.0" layoutY="171.0" prefHeight="26.0" prefWidth="197.0" promptText="Username" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="65.0" />
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="50.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="50.0">
-               <image>
-                  <Image url="@../image/username.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="50.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/password.png" />
-               </image>
-            </ImageView>
-            <PasswordField fx:id="passwordText" layoutX="100.0" layoutY="217.0" prefHeight="26.0" prefWidth="195.0" promptText="Password" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="217.0" />
-            <ImageView fitHeight="66.0" fitWidth="63.0" layoutX="133.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="148.8">
-               <image>
-                  <Image url="@../image/lock.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="50.0" layoutY="280.0" mnemonicParsing="false" onAction="#SignInButton" prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #0099FF;" text="Đăng nhập" textFill="WHITE" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="65.0">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Button>
-            <Button fx:id="cancel" layoutX="50.0" layoutY="325.0" mnemonicParsing="false" onAction="#CancelButton" prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #0099FF;" text="Thoát" textFill="WHITE" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="65.0">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Button>
-            <Label layoutX="141.0" prefHeight="1.0" prefWidth="345.0" style="-fx-background-color: #0099FF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Label layoutY="377.0" prefHeight="1.0" prefWidth="345.0" style="-fx-background-color: #0099FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Label layoutX="331.0" layoutY="18.0" prefHeight="1.0" prefWidth="15.0" style="-fx-background-color: #0099FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Label fx:id="userNameError" layoutX="100.0" layoutY="199.0" textFill="RED" />
-            <Label fx:id="passwordError" layoutX="100.0" layoutY="245.0" textFill="#f40000" />
-            <Button layoutX="257.0" layoutY="18.0" mnemonicParsing="false" onAction="#SignUpButton" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #ffffff;" text="Đăng ký?" textFill="#0099ff" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="18.0">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
-         </children>
-      </AnchorPane>
-   </center>
-</BorderPane>
+<StackPane fx:id="stackPain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dangnhap.SignInController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <left>
+            <AnchorPane prefHeight="400.0" prefWidth="248.0" style="-fx-background-color: #0099FF;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="46.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/book.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="70.0" fitWidth="106.0" layoutX="93.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/money.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutY="116.0" prefHeight="44.0" prefWidth="255.0" text="HỆ THỐNG QUẢN LÍ" textFill="#f70000" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutY="148.0" prefHeight="44.0" prefWidth="255.0" text="HỌC PHÍ SINH VIÊN" textFill="#f70000">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="400.0" prefWidth="359.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="userNameText" layoutX="100.0" layoutY="171.0" prefHeight="26.0" prefWidth="197.0" promptText="Username" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="65.0" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="50.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="50.0">
+                     <image>
+                        <Image url="@../image/username.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="50.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/password.png" />
+                     </image>
+                  </ImageView>
+                  <PasswordField fx:id="passwordText" layoutX="100.0" layoutY="217.0" prefHeight="26.0" prefWidth="195.0" promptText="Password" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="217.0" />
+                  <ImageView fitHeight="66.0" fitWidth="63.0" layoutX="133.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="148.8">
+                     <image>
+                        <Image url="@../image/lock.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="50.0" layoutY="280.0" mnemonicParsing="false" onAction="#SignInButton" prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #0099FF;" text="Đăng nhập" textFill="WHITE" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="65.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cancel" layoutX="50.0" layoutY="325.0" mnemonicParsing="false" onAction="#CancelButton" prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #0099FF;" text="Thoát" textFill="WHITE" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="65.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="141.0" prefHeight="1.0" prefWidth="345.0" style="-fx-background-color: #0099FF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label layoutY="377.0" prefHeight="1.0" prefWidth="345.0" style="-fx-background-color: #0099FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label layoutX="331.0" layoutY="18.0" prefHeight="1.0" prefWidth="15.0" style="-fx-background-color: #0099FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="userNameError" layoutX="100.0" layoutY="199.0" textFill="RED" />
+                  <Label fx:id="passwordError" layoutX="100.0" layoutY="245.0" textFill="#f40000" />
+                  <Button layoutX="257.0" layoutY="18.0" mnemonicParsing="false" onAction="#SignUpButton" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #ffffff;" text="Đăng ký?" textFill="#0099ff" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="18.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

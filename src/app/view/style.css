@@ -1,0 +1,36 @@
+.root {
+    -fx-background-color: white;
+    -fx-font-size: 14;
+}
+
+.glyph-icon {
+  -fx-fill: white;
+}
+
+.button {
+    -fx-background-color: #349ce4;
+    -fx-text-fill: white;
+    -fx-border-radius: 3em;
+    -fx-background-radius: 3em;
+}
+
+.button:hover {
+    -fx-background-color: #2d8dcf;
+    -fx-text-fill: white;
+}
+
+.titled-pane > *.content {
+    -fx-background-color: white;
+}
+
+.titled-pane > .title {
+    -fx-text-alignment: center;
+    -fx-background-color: #349ce4;
+    -fx-font-size: 18;
+}
+
+.titled-pane {
+    -fx-text-fill: white;
+    -fx-alignment: center;
+
+}

@@ -1,4 +1,4 @@
-package controller;
+package controller.tinchi;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;

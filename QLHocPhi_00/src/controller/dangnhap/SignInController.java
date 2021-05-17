@@ -1,16 +1,17 @@
-package controller;
+package controller.dangnhap;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -24,6 +25,8 @@ import java.util.ResourceBundle;
 
 public class SignInController implements Initializable {
     @FXML
+    private StackPane stackPain;
+    @FXML
     private TextField userNameText;
     @FXML
     private PasswordField passwordText;
@@ -32,7 +35,6 @@ public class SignInController implements Initializable {
     private Label userNameError;
     @FXML
     private Label passwordError;
-
 
     @FXML
     private Button cancel;
@@ -66,7 +68,6 @@ public class SignInController implements Initializable {
                 pst = conn.prepareStatement(sql);
                 result = pst.executeQuery();
                 if (result.next()) {
-                    Thread.sleep(1000);
                     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     Parent root = FXMLLoader.load(getClass().getResource("../view/QLHocPhi.fxml"));
                     Scene scene = new Scene(root);
@@ -79,8 +80,6 @@ public class SignInController implements Initializable {
                 throwables.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
             }
         }
     }
@@ -91,5 +90,13 @@ public class SignInController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("../view/SignUp.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
+    }
+
+    private boolean load() throws InterruptedException {
+        for (int i = 0; i < 10; i++) {
+            Thread.sleep(100);
+            i++;
+        }
+        return true;
     }
 }

@@ -1,4 +1,4 @@
-package controller;
+package controller.ctrmau;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

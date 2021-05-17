@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<GridPane prefHeight="800" prefWidth="450" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.SelectSceneController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+   <columnConstraints>
+      <ColumnConstraints hgrow="ALWAYS" percentWidth="100" prefWidth="300" />
+   </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS" />
+        <RowConstraints prefHeight="30" />
+    </rowConstraints>
+    <VBox>
+        <TitledPane collapsible="false" text="SELECT SENTENCE">
+            <TableView fx:id="tableView" editable="true" prefHeight="1039.0" prefWidth="428.0">
+                <columns>
+                    <TableColumn fx:id="checkBoxColumn" prefWidth="40" style="-fx-alignment: CENTER;">
+                        <!--               <cellValueFactory>-->
+                        <!--                  <PropertyValueFactory property="checkBox"  />-->
+                        <!--               </cellValueFactory>-->
+                    </TableColumn>
+                    <TableColumn fx:id="sentenceColumn" />
+                </columns>
+            </TableView>
+        </TitledPane>
+    </VBox>
+    <HBox style="-fx-padding:10 0 0 0" spacing="10" alignment="BOTTOM_RIGHT" GridPane.rowIndex="1">
+        <Button mnemonicParsing="false" onAction="#gotoUpdate">
+            <graphic>
+                <FontAwesomeIconView glyphName="ARROW_LEFT" />
+            </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#gotoResult">
+            <graphic>
+                <FontAwesomeIconView glyphName="ARROW_RIGHT"/>
+            </graphic>
+        </Button>
+    </HBox>
+</GridPane>
