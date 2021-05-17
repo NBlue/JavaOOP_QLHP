@@ -5,52 +5,47 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #0099FF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QLHocPhiController">
+<AnchorPane prefHeight="560.0" prefWidth="1100.0" style="-fx-background-color: #0099FF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QLHocPhiController">
    <children>
-      <VBox style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Label alignment="CENTER" prefHeight="100.0" prefWidth="800.0" text="QUẢN LÍ HỌC PHÍ SINH VIÊN" textFill="#fc0303">
-               <font>
-                  <Font name="System Bold" size="36.0" />
-               </font>
-            </Label>
-         </children>
-      </VBox>
-      <Button fx:id="exitButton" defaultButton="true" layoutX="27.0" layoutY="130.0" mnemonicParsing="false" onAction="#HandlerStudentTinChi" prefHeight="126.0" prefWidth="437.0" style="-fx-background-color: #F9F400;" text="Sinh viên học tín chỉ" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="130.0">
+      <Label alignment="CENTER" prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #000000;" text="QUẢN LÍ HỌC PHÍ SINH VIÊN" textFill="#fc0303" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="exitButton" defaultButton="true" layoutX="27.0" layoutY="130.0" mnemonicParsing="false" onAction="#HandlerStudentTinChi" prefHeight="159.0" prefWidth="630.0" style="-fx-background-color: #F9F400;" text="Sinh viên học tín chỉ" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="140.0">
          <graphic>
-            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/editStudent.png" />
                </image>
             </ImageView>
          </graphic>
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
       </Button>
-      <ImageView fitHeight="274.0" fitWidth="282.0" layoutX="484.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="487.6" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="130.0">
+      <ImageView fitHeight="350.0" fitWidth="350.0" layoutX="713.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="140.0">
          <image>
             <Image url="@../image/fees.png" />
          </image>
       </ImageView>
-      <Button defaultButton="true" layoutX="342.0" layoutY="438.0" mnemonicParsing="false" onAction="#HandlerExitButton" prefHeight="27.0" prefWidth="115.0" text="Thoát" textFill="#0022ff">
+      <Button defaultButton="true" layoutX="492.0" layoutY="509.0" mnemonicParsing="false" onAction="#HandlerExitButton" prefHeight="27.0" prefWidth="115.0" text="Thoát" textFill="#ff0d00">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button defaultButton="true" layoutX="27.0" layoutY="277.0" mnemonicParsing="false" onAction="#HandlerStudentCTMau" prefHeight="126.0" prefWidth="437.0" style="-fx-background-color: #5BBD2B;" text="Sinh viên học chương trình mẫu" AnchorPane.leftAnchor="30.0">
+      <Button defaultButton="true" layoutX="23.0" layoutY="354.0" mnemonicParsing="false" onAction="#HandlerStudentCTMau" prefHeight="159.0" prefWidth="630.0" style="-fx-background-color: #5BBD2B;" text="Sinh viên học chương trình mẫu" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="40.0">
          <graphic>
-            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/editStudent.png" />
                </image>
             </ImageView>
          </graphic>
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
       </Button>
    </children>

@@ -1,3 +1,5 @@
+/**@admin: Nguyễn Mạnh Duy - 20194262
+ * */
 package dialog_notification;
 
 import javafx.scene.control.Alert;

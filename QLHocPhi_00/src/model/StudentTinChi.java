@@ -1,3 +1,6 @@
+/**@Admin: Tô Đức Hiệp - 20194278
+ * */
+
 package model;
 
 public class StudentTinChi extends Student {

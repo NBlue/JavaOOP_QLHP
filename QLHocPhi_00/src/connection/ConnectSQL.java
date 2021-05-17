@@ -1,14 +1,12 @@
 /** @ADMIN: Nguyễn Phương Nam - 20194336
- *  - Lên ý tưởng, tạo Database, kết nối database bằng class ConnectSQl
+ *  - Tạo Database: QLHocPhiSV, backup lại để cách thành viên restore, kết nối database bằng class ConnectSQl.
  *
  *
  *  CHÚ Ý: ĐỂ PROJECT CHẠY ĐƯỢC CẦN:
  *  +) CÓ SQL SERVER, DATABASE: QLHocPhiSV
- *  +) username and password của máy destop
+ *  +) username and password của máy desktop, laptop đăng nhập SQL server của bạn.
  *  => Thay đổi code đúng ở dòng 20, 21
  * */
-
-
 package connection;
 
 import java.sql.Connection;

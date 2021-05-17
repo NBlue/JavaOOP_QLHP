@@ -17,6 +17,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+/**@admin: Nguyễn Phương Nam - 20194336
+ * */
 
 public class ThongKeTinChiController implements Initializable {
     @FXML

@@ -1,6 +1,4 @@
-/**@admin: Nguyễn Mạnh Duy
- * Làm việc với phần sinh viên Tín Chỉ: HocTinChi, ThongKeTinChi, SumFeesTinChi
- *
+/**@admin: Nguyễn Phương Nam - 20194336
  * */
 package controller.tinchi;
 
