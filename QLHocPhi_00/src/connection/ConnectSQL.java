@@ -1,4 +1,7 @@
-/** @ADMIN: Nam
+/** @ADMIN: Nguyễn Phương Nam - 20194336
+ *  - Lên ý tưởng, tạo Database, kết nối database bằng class ConnectSQl
+ *
+ *
  *  CHÚ Ý: ĐỂ PROJECT CHẠY ĐƯỢC CẦN:
  *  +) CÓ SQL SERVER, DATABASE: QLHocPhiSV
  *  +) username and password của máy destop

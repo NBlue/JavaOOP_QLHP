@@ -349,11 +349,8 @@ public class HocCtrMauController extends StudentCtrMau implements Initializable 
      */
     @FXML
     void handleStatisticStudent(ActionEvent event) throws IOException {
-//        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("../view/ThongKeCtrMau.fxml"));
-        Parent thongKe = loader.load();
+        Parent thongKe = FXMLLoader.load(getClass().getResource("/view/ThongKeCtrMau.fxml"));
         Scene root = new Scene(thongKe);
         stage.setScene(root);
         stage.setResizable(false);
@@ -366,11 +363,8 @@ public class HocCtrMauController extends StudentCtrMau implements Initializable 
      */
     @FXML
     void handleSumFees(ActionEvent event) throws IOException {
-//        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("../view/SumFeesCtrMau.fxml"));
-        Parent sumFees = loader.load();
+        Parent sumFees = FXMLLoader.load(getClass().getResource("/view/SumFeesCtrMau.fxml"));
         Scene root = new Scene(sumFees);
         stage.setScene(root);
         stage.setResizable(false);
@@ -473,9 +467,7 @@ public class HocCtrMauController extends StudentCtrMau implements Initializable 
     @FXML
     void handleCancelHocCtrMau(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("../view/QLHocPhi.fxml"));
-        Parent QLHocPhi = loader.load();
+        Parent QLHocPhi = FXMLLoader.load(getClass().getResource("/view/QLHocPhi.fxml"));
         Scene scene = new Scene(QLHocPhi);
         stage.setScene(scene);
     }

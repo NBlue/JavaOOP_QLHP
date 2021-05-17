@@ -1,3 +1,7 @@
+/**@admin: Nguyễn Mạnh Duy
+ * Làm việc với phần sinh viên Tín Chỉ: HocTinChi, ThongKeTinChi, SumFeesTinChi
+ *
+ * */
 package controller.tinchi;
 
 import javafx.collections.FXCollections;
@@ -352,9 +356,7 @@ public class HocTinChiController extends StudentTinChi implements Initializable 
     void handleStatisticStudent(ActionEvent event) throws IOException {
 //        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("../view/ThongKeTinChi.fxml"));
-        Parent thongKe = loader.load();
+        Parent thongKe = FXMLLoader.load(getClass().getResource("/view/ThongKeTinChi.fxml"));
         Scene root = new Scene(thongKe);
         stage.setScene(root);
         stage.setResizable(false);
@@ -369,9 +371,7 @@ public class HocTinChiController extends StudentTinChi implements Initializable 
     void handleSumFees(ActionEvent event) throws IOException {
         Stage stage = new Stage();
 //        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("../view/SumFeesTinChi.fxml"));
-        Parent sumFees = loader.load();
+        Parent sumFees = FXMLLoader.load(getClass().getResource("/view/SumFeesTinChi.fxml"));
         Scene root = new Scene(sumFees);
         stage.setScene(root);
         stage.setResizable(false);
@@ -473,9 +473,7 @@ public class HocTinChiController extends StudentTinChi implements Initializable 
     @FXML
     void handleCancelHocTinChi(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(this.getClass().getResource("../view/QLHocPhi.fxml"));
-        Parent QLHocPhi = loader.load();
+        Parent QLHocPhi = FXMLLoader.load(getClass().getResource("/view/QLHocPhi.fxml"));
         Scene scene = new Scene(QLHocPhi);
         stage.setScene(scene);
     }

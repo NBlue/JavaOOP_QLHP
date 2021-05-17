@@ -65,7 +65,7 @@ public class SignUpController implements Initializable {
         try {
             if (dialog_notification.AlertDialog.displayExit()) {
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                Parent root = FXMLLoader.load(getClass().getResource("../view/SignIn.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/view/SignIn.fxml"));
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
             }

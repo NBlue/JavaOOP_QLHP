@@ -25,9 +25,7 @@ public class QLHocPhiController {
     @FXML
     void HandlerStudentCTMau(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("../view/HocCtrMau.fxml"));
-        Parent hocCtrMau = loader.load();
+        Parent hocCtrMau = FXMLLoader.load(getClass().getResource("/view/HocCtrMau.fxml"));
         Scene scene = new Scene(hocCtrMau);
         stage.setScene(scene);
     }
@@ -35,9 +33,7 @@ public class QLHocPhiController {
     @FXML
     void HandlerStudentTinChi(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("../view/HocTinChi.fxml"));
-        Parent hocTinChi = loader.load();
+        Parent hocTinChi = FXMLLoader.load(getClass().getResource("/view/HocTinChi.fxml"));
         Scene scene = new Scene(hocTinChi);
         stage.setScene(scene);
     }

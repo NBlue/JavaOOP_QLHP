@@ -2,11 +2,7 @@ package controller.tinchi;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -62,12 +58,5 @@ public class SumFeesTinChiController implements Initializable {
     @FXML
     void handleCancelSumFees(ActionEvent event) throws IOException {
         ((Stage)exitButton.getScene().getWindow()).close();
-//        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-//        FXMLLoader loader = new FXMLLoader();
-//        loader.setLocation(getClass().getResource("../view/HocTinChi.fxml"));
-//        Parent root = loader.load();
-//        Scene scene = new Scene(root);
-//        stage.setScene(scene);
-//        stage.setScene(scene);
     }
 }

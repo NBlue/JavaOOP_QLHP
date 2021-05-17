@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="560.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HocCtrMauController">
+<AnchorPane prefHeight="560.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ctrmau.HocCtrMauController">
     <children>
         <VBox alignment="CENTER" layoutX="-3.0" layoutY="14.0" prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: #0099FF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -168,45 +168,60 @@
         </TableView>
         <HBox layoutX="30.0" layoutY="492.0">
             <children>
-                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleAddStudent" prefHeight="26.0" prefWidth="100.0" text="Thêm">
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleAddStudent" prefHeight="26.0" prefWidth="100.0" text="Thêm" textFill="#408662">
                     <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                     <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
                 </Button>
-                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleUpdateStudent" prefHeight="26.0" prefWidth="100.0" text="Cập nhật">
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleUpdateStudent" prefHeight="26.0" prefWidth="100.0" text="Cập nhật" textFill="#408662">
                     <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                     <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
                 </Button>
-                <Button defaultButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleDeleteStudent" prefHeight="26.0" prefWidth="100.0" text="Xóa">
+                <Button defaultButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleDeleteStudent" prefHeight="26.0" prefWidth="100.0" text="Xóa" textFill="#408662">
                     <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                     <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
                 </Button>
-                <Button defaultButton="true" layoutX="110.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleStatisticStudent" prefHeight="26.0" prefWidth="100.0" text="Thống kê">
+                <Button defaultButton="true" layoutX="110.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleStatisticStudent" prefHeight="26.0" prefWidth="100.0" text="Thống kê" textFill="#408662">
                     <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                     <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
                 </Button>
-                <Button defaultButton="true" layoutX="383.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleSumFees" prefHeight="26.0" prefWidth="100.0" text="Tổng học phí">
+                <Button defaultButton="true" layoutX="383.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleSumFees" prefHeight="26.0" prefWidth="100.0" text="Tổng học phí" textFill="#408662">
                     <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                     <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
                 </Button>
             </children>
         </HBox>

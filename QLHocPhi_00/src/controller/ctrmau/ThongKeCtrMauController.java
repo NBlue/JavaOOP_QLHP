@@ -4,11 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
@@ -96,12 +92,6 @@ public class ThongKeCtrMauController implements Initializable {
     @FXML
     void handleCancelThongKe(ActionEvent event) throws IOException {
         ((Stage)exitButton.getScene().getWindow()).close();
-//        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        FXMLLoader loader = new FXMLLoader();
-//        loader.setLocation(getClass().getResource("../view/HocCtrMau.fxml"));
-//        Parent hocTinChi = loader.load();
-//        Scene root = new Scene(hocTinChi);
-//        stage.setScene(root);
     }
 
 }
