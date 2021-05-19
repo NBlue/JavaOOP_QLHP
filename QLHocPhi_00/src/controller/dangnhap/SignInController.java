@@ -1,4 +1,5 @@
 /**@Admin: Tô Đức Hiệp - 20194278
+ * Nguyễn Phương Nam: LoadingProgress
  * */
 package controller.dangnhap;
 
@@ -70,6 +71,7 @@ public class SignInController implements Initializable {
                 pst = conn.prepareStatement(sql);
                 result = pst.executeQuery();
                 if (result.next()) {
+                    // Chuyển đến scene LoadingProgess
                     Stage stageLoading = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     Parent rootLoading = FXMLLoader.load(getClass().getResource("/view/LoadProgress.fxml"));
                     Scene sceneLoad = new Scene(rootLoading);
@@ -78,6 +80,8 @@ public class SignInController implements Initializable {
                     PauseTransition delay = new PauseTransition(Duration.seconds(3));
                     delay.setOnFinished(event1 -> {
                         stageLoading.close();
+
+                        // Sau khi SceneLoading kết thúc, gọi StageQLHocPhi
                         Stage stage = new Stage();
                         Parent root = null;
                         try {
