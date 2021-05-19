@@ -2,6 +2,7 @@
  * */
 package controller.dangnhap;
 
+import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +15,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
@@ -68,19 +70,28 @@ public class SignInController implements Initializable {
                 pst = conn.prepareStatement(sql);
                 result = pst.executeQuery();
                 if (result.next()) {
-                    ProgressIndicator pi = new ProgressIndicator();
-                    pi.setPrefWidth(200);
-                    VBox box = new VBox(pi);
-                    box.setAlignment(Pos.CENTER);
-                    //stackPain.getChildren().add(box);
-                    Platform.runLater(() -> {
+                    Stage stageLoading = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    Parent rootLoading = FXMLLoader.load(getClass().getResource("/view/LoadProgress.fxml"));
+                    Scene sceneLoad = new Scene(rootLoading);
+                    stageLoading.setScene(sceneLoad);
 
+                    PauseTransition delay = new PauseTransition(Duration.seconds(3));
+                    delay.setOnFinished(event1 -> {
+                        stageLoading.close();
+                        Stage stage = new Stage();
+                        Parent root = null;
+                        try {
+                            root = FXMLLoader.load(getClass().getResource("/view/QLHocPhi.fxml"));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        Scene scene = new Scene(root);
+                        stage.setScene(scene);
+                        stage.setResizable(false);
+                        stage.setMaximized(false);
+                        stage.show();
                     });
-                    Thread.sleep(500);
-                    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    Parent root = FXMLLoader.load(getClass().getResource("/view/QLHocPhi.fxml"));
-                    Scene scene = new Scene(root);
-                    stage.setScene(scene);
+                    delay.play();
                 } else {
                     dialog_notification.AlertDialog.errorSignIn("Error!", "Username hoặc Password không đúng!");
                     passwordText.clear();
@@ -88,8 +99,6 @@ public class SignInController implements Initializable {
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             } catch (IOException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }

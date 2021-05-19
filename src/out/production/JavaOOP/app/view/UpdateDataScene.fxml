@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.UpdateDataSceneController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="100" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS" />
+    </rowConstraints>
+    <TitledPane collapsible="false" text="UPDATE DATA">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <GridPane>
+            <padding>
+                <Insets bottom="35" left="10" right="10" top="10" />
+            </padding>
+            <rowConstraints>
+                <RowConstraints vgrow="ALWAYS" percentHeight="100" />
+                <RowConstraints vgrow="ALWAYS" prefHeight="20" />
+            </rowConstraints>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50" />
+                <ColumnConstraints prefWidth="3" />
+                <ColumnConstraints percentWidth="50" />
+            </columnConstraints>
+            <VBox prefHeight="159.0" prefWidth="430.0" style="-fx-padding: 0 0 0 50; -fx-alignment: center;">
+                <VBox spacing="10">
+                    <Label text="Update automatically" />
+                    <Button fx:id="updateAutoBtn" mnemonicParsing="false" onAction="#downloadData" pickOnBounds="false" text="Update">
+                        <graphic>
+                            <FontAwesomeIconView glyphName="CLOUD_DOWNLOAD" />
+                        </graphic>
+                    </Button>
+                    <ProgressBar fx:id="automaticProgressBar" prefWidth="200.0" progress="0.0" />
+                </VBox>
+            </VBox>
+            <VBox style="-fx-padding: 0 0 0 50; -fx-alignment: center;" GridPane.columnIndex="2" >
+                <VBox spacing="10" >
+                    <Label text="Update manually" />
+                    <HBox prefHeight="35.0" prefWidth="430.0" spacing="15.0">
+                        <Button mnemonicParsing="false" onAction="#browseData" pickOnBounds="false"  text="Import">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="DOWNLOAD" />
+                            </graphic>
+                        </Button>
+                        <Label fx:id="filename" text="Not selected" />
+                    </HBox>
+                    <Button fx:id="updateManuallyBtn" disable="true" mnemonicParsing="false" onAction="#updateData" text="Update" />
+                    <ProgressBar fx:id="updateManuallyProgressBar" prefWidth="200.0" progress="0.0" />
+                </VBox>
+
+            </VBox>
+            <HBox prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="1" alignment="BOTTOM_RIGHT">
+                <Button fx:id="nextBtn" disable="true" mnemonicParsing="false" onAction="#gotoSelect">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="ARROW_RIGHT" size="20" />
+                    </graphic>
+                </Button>
+            </HBox>
+            <Separator orientation="VERTICAL" maxHeight="100" prefWidth="1" GridPane.columnIndex="1" />
+<!--            <HBox GridPane.columnIndex="1" prefWidth="50" prefHeight="50" alignment="BOTTOM_RIGHT" app.view.style="-fx-padding: 0 0 0 0">-->
+<!--                -->
+<!--            </HBox>-->
+        </GridPane>
+    </TitledPane>
+</GridPane>

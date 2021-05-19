@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="800.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.ResultSceneController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="100" prefWidth="300" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS" />
+        <RowConstraints prefHeight="30" />
+    </rowConstraints>
+    <VBox>
+        <TitledPane collapsible="false" text="RESULT">
+            <padding>
+                <Insets />
+            </padding>
+            <TextArea fx:id="resultTextArea" prefHeight="919.0" prefWidth="428.0" wrapText="true">
+            </TextArea>
+        </TitledPane>
+    </VBox>
+    <HBox alignment="BOTTOM_RIGHT" spacing="10" style="-fx-padding:10 0 0 0" GridPane.rowIndex="1">
+        <Button mnemonicParsing="false" onAction="#gotoSelect" text="Back">
+            <graphic>
+                <FontAwesomeIconView glyphName="ARROW_LEFT" />
+            </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#save" text="Save">
+            <graphic>
+                <FontAwesomeIconView glyphName="SAVE" />
+            </graphic>
+        </Button>
+    </HBox>
+</GridPane>
