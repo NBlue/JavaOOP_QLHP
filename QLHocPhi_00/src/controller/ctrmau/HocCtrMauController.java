@@ -179,7 +179,6 @@ public class HocCtrMauController extends StudentCtrMau implements Initializable 
         if (isIdEmpty && isNameEmpty && isBirthdayEmpty && isEmailEmpty && isStudyProgram && isHocPhan && isNamHoc) {
             String sql = "Update tblHocCtrMau set name = ?, birthday = ?, " +
                     "email = ?, studyProgram = ?, hocPhan = ?, fees = ?, namHoc = ? where ID = ?";
-            float tinhHocPhi = (float) (Float.valueOf(ctrHocPhanText.getText()) * 2.5 * 250 + 1000);
             String birthday = ctrBirthdayDate.getValue().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
             try {
                 pst = conn.prepareStatement(sql);
@@ -188,7 +187,7 @@ public class HocCtrMauController extends StudentCtrMau implements Initializable 
                 pst.setString(3, ctrEmailText.getText());
                 pst.setString(4, ctrStudyProgramText.getText());
                 pst.setFloat(5, Float.valueOf(ctrHocPhanText.getText()));
-                pst.setFloat(6, tinhHocPhi);
+                pst.setFloat(6, fees(ctrHocPhanText.getText()));
                 pst.setString(7, ctrNamHocText.getText());
                 pst.setString(8, ctrIdText.getText());
 

@@ -151,7 +151,7 @@ public class HocTinChiController extends StudentTinChi implements Initializable 
                     pst.close();
                 }
             } else {
-                dialog_notification.AlertDialog.errorSignIn("ID", "ID  này đã được sử dung!");
+                dialog_notification.AlertDialog.errorSignIn("ID", "ID  này đã được sử dụng!");
                 tcIdError.setText("Nhập ID khác");
                 clearTextField();
             }
@@ -180,7 +180,6 @@ public class HocTinChiController extends StudentTinChi implements Initializable 
         if (isIdEmpty && isNameEmpty && isBirthdayEmpty && isEmailEmpty && isStudyProgram && isTinChi && isNamHoc) {
             String sql = "Update tblHocTinChi set name = ?, birthday = ?, " +
                     "email = ?, studyProgram = ?, tinChi = ?, fees = ?, namHoc = ? where ID = ?";
-            float tinhHocPhi = Float.valueOf(tcTinChiText.getText()) * 250;
             String birthday = tcBirthdayDate.getValue().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
             try {
                 pst = conn.prepareStatement(sql);
@@ -189,7 +188,7 @@ public class HocTinChiController extends StudentTinChi implements Initializable 
                 pst.setString(3, tcEmailText.getText());
                 pst.setString(4, tcStudyProgramText.getText());
                 pst.setFloat(5, Float.valueOf(tcTinChiText.getText()));
-                pst.setFloat(6, tinhHocPhi);
+                pst.setFloat(6, fees(tcTinChiText.getText()));
                 pst.setString(7, tcNamHocText.getText());
                 pst.setString(8, tcIdText.getText());
 
