@@ -40,7 +40,7 @@ public class TextFieldValidation {
         boolean b = true;
         String msg = null;
         if(!textFieldTypeNumber(tf)){
-            b = true;
+            b = false;
             msg = errorMessage;
         }
         lb.setText(msg);
