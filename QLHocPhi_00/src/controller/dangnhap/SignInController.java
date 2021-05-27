@@ -71,7 +71,9 @@ public class SignInController implements Initializable {
                 pst = conn.prepareStatement(sql);
                 result = pst.executeQuery();
                 if (result.next()) {
-                    // Chuyển đến scene LoadingProgess
+                    /**
+                     * Chuyển đến scene LoadingProgess
+                     * */
                     Stage stageLoading = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     Parent rootLoading = FXMLLoader.load(getClass().getResource("/view/LoadProgress.fxml"));
                     Scene sceneLoad = new Scene(rootLoading);
